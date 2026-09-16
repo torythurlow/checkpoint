@@ -8,7 +8,7 @@ class ExecutableMatcher
      * Return IDs of processes whose executable paths match the target,
      * ignoring letter casing and skipping unavailable paths.
      *
-     * @param array<int, array{pid: int, path: string|null}> $processes
+     * @param  array<int, array{pid: int, path: string|null}>  $processes
      * @return list<int>
      */
     public function matchingProcessIds(array $processes, string $targetPath): array
@@ -24,6 +24,7 @@ class ExecutableMatcher
                 $processIds[] = $process['pid'];
             }
         }
+
         return $processIds;
     }
 }
